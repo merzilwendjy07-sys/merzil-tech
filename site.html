@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZIL-TECH | Services Informatiques & Réseaux</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* === Reset & Global Styles === */
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Roboto', sans-serif; background-color: #f9f9f9; color: #333; scroll-behavior: smooth;}
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* === Header === */
+        header {
+            background: linear-gradient(135deg, #0d6efd, #6610f2);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: fadeInDown 1s ease forwards;
+        }
+        header p {
+            font-size: 1.3em;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 0.5s;
+        }
+
+        /* === Navbar === */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            padding: 15px 25px;
+            font-weight: bold;
+            color: #0d6efd;
+            transition: 0.3s;
+        }
+        nav a:hover { background-color: #0d6efd; color: white; border-radius: 5px; }
+
+        /* === Section Services === */
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5em;
+            color: #0d6efd;
+        }
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+        .service-card h3 {
+            color: #6610f2;
+            margin-bottom: 15px;
+        }
+        .service-card ul li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .service-card ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #0d6efd;
+        }
+
+        /* === Galerie Photos === */
+        .photos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .photos img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.3s, filter 0.3s;
+        }
+        .photos img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        /* === Contact Section === */
+        .contact {
+            background-color: #0d6efd;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .contact h2 { font-size: 2.5em; margin-bottom: 20px; }
+        .contact p { font-size: 1.3em; margin-bottom: 20px; }
+        .contact a {
+            margin: 0 15px;
+            font-size: 2em;
+            color: white;
+            transition: transform 0.3s;
+        }
+        .contact a:hover { transform: scale(1.2); }
+
+        /* === Footer === */
+        footer {
+            background-color: #6610f2;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* === Animations === */
+        @keyframes fadeInDown {
+            0% { opacity:0; transform: translateY(-20px);}
+            100% { opacity:1; transform: translateY(0);}
+        }
+        @keyframes fadeInUp {
+            0% { opacity:0; transform: translateY(20px);}
+            100% { opacity:1; transform: translateY(0);}
+        }
+
+        /* Responsive */
+        @media (max-width: 600px){
+            header h1 { font-size: 2.2em; }
+            section h2 { font-size: 2em; }
+            .service-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>ZIL-TECH</h1>
+    <p>Services Informatiques & Réseaux | Maintenance, Sécurité & Réseaux</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="#services">Services</a>
+    <a href="#photos">Galerie</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Services Section -->
+<section id="services">
+    <h2>Nos Services</h2>
+    <div class="services-container">
+        <div class="service-card">
+            <h3>🔧 Maintenance & Dépannage</h3>
+            <ul>
+                <li>Réinstallation complète du système (PC lent ou bloqué)</li>
+                <li>Réparation Windows qui ne démarre pas</li>
+                <li>Correction d’erreurs système</li>
+            </ul>
+        </div>
+        <div class="service-card">
+            <h3>💻 Systèmes d’exploitation</h3>
+            <ul>
+                <li>Installation Windows 10 / 11</li>
+                <li>Mise à jour et configuration du système</li>
+                <li>Optimisation des performances</li>
+            </ul>
+        </div>
+        <div class="service-card">
+            <h3>🔐 Accès & Sécurité</h3>
+            <ul>
+                <li>Récupération d’accès (mot de passe oublié)</li>
+                <li>Suppression de virus et malwares</li>
+                <li>Installation antivirus et protection PC</li>
+            </ul>
+        </div>
+        <div class="service-card">
+            <h3>🌐 Réseaux informatiques</h3>
+            <ul>
+                <li>Configuration Wi-Fi</li>
+                <li>Partage réseau</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Galerie Photos -->
+<section id="photos">
+    <h2>Galerie de nos Services</h2>
+    <div class="photos">
+        <img src="votre-image1.jpg" alt="Service 1">
+        <img src="votre-image2.jpg" alt="Service 2">
+        <img src="votre-image3.jpg" alt="Service 3">
+        <img src="votre-image4.jpg" alt="Service 4">
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <h2>Contactez-nous</h2>
+    <p>Téléphone: (509) 3491-1364</p>
+    <a href="https://wa.me/50934911364" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://instagram.com/votreprofil" target="_blank"><i class="fab fa-instagram"></i></a>
+</section>
+
+<!-- Footer -->
+<footer>
+    &copy; 2026 ZIL-TECH | Tous droits réservés
+</footer>
+
+</body>
+</html>
